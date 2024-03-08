@@ -23,7 +23,7 @@ def parse_file(filename):
     cookie_first = [{'domain': cookie['domain'], 'expires': cookie['expires'],
                      'size': cookie['size'], 'name': cookie['name']} for cookie in data['first']['cookies']['cookies']]
     cookie_click = [{'domain': cookie['domain'], 'expires': cookie['expires'],
-                           'size': cookie['size'], 'name': cookie['name']} for cookie in data['second']['cookies']['cookies']]
+                           'size': cookie['size'], 'name': cookie['name']} for cookie in data['click']['cookies']['cookies']] #  use 'second' or 'click'?
     
     if data['internal'] is not None:
         cookie_internal = [{'domain': cookie['domain'], 'expires': cookie['expires'],
@@ -76,7 +76,7 @@ def main():
     #     print("Usage: python parse.py <output_folder_path>")
     #     sys.exit(1)
     # output_folder_path = sys.argv[1]
-    df = read_files_in_folder("./")
+    df = read_files_in_folder("./output")
     if not df.empty:
         csv_file_name = "output.csv"
         df.to_csv("output.csv", index=False)
