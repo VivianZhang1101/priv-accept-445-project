@@ -23,7 +23,7 @@ def parse_file(filename):
     cookie_first = [{'domain': cookie['domain'], 'expires': cookie['expires'],
                      'size': cookie['size'], 'name': cookie['name']} for cookie in data['first']['cookies']['cookies']]
     cookie_click = [{'domain': cookie['domain'], 'expires': cookie['expires'],
-                           'size': cookie['size'], 'name': cookie['name']} for cookie in data['click']['cookies']['cookies']] #  use 'second' or 'click'?
+                           'size': cookie['size'], 'name': cookie['name']} for cookie in data['second']['cookies']['cookies']] #  use 'second' or 'click'?
     
     if data['internal'] is not None:
         cookie_internal = [{'domain': cookie['domain'], 'expires': cookie['expires'],
