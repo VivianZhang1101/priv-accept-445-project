@@ -44,8 +44,8 @@ def parse_file(filename):
     "cookie_first": json.dumps(cookie_first),
     "cookie_click": json.dumps(cookie_click),
     "cookie_internal": json.dumps(cookie_internal),
-    "domains_first": domains_first,
-    "domains_click": domains_click
+    "domains_first": json.dumps(domains_first),
+    "domains_click": json.dumps(domains_click)
 }
     return new_row
     # Append the new row to the DataFrame
