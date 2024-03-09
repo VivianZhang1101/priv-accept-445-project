@@ -72,11 +72,11 @@ def read_files_in_folder(output_folder_path):
 
 
 def main():
-    # if len(sys.argv) != 2:
-    #     print("Usage: python parse.py <output_folder_path>")
-    #     sys.exit(1)
-    # output_folder_path = sys.argv[1]
-    df = read_files_in_folder("./output")
+    if len(sys.argv) != 2:
+        print("Usage: python parse.py <output_folder_path>")
+        sys.exit(1)
+    output_folder_path = sys.argv[1]
+    df = read_files_in_folder(output_folder_path)
     if not df.empty:
         csv_file_name = "output.csv"
         df.to_csv("output.csv", index=False)
