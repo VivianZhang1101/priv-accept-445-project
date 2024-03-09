@@ -20,14 +20,14 @@ def parse_file(filename):
     data = json.load(f)
     
     # parsing cookies data
-    cookie_first = [{'domain': cookie['domain'], 'expires': cookie['expires'],
-                     'size': cookie['size'], 'name': cookie['name']} for cookie in data['first']['cookies']['cookies']]
-    cookie_click = [{'domain': cookie['domain'], 'expires': cookie['expires'],
-                           'size': cookie['size'], 'name': cookie['name']} for cookie in data['second']['cookies']['cookies']] #  use 'second' or 'click'?
+    cookie_first = [{"domain": cookie['domain'], "expires": cookie['expires'],
+                     "size": cookie['size'], "name": cookie['name']} for cookie in data['first']['cookies']['cookies']]
+    cookie_click = [{"domain": cookie['domain'], "expires": cookie['expires'],
+                           "size": cookie['size'], "name": cookie['name']} for cookie in data['second']['cookies']['cookies']] #  use 'second' or 'click'?
     
     if data['internal'] is not None:
-        cookie_internal = [{'domain': cookie['domain'], 'expires': cookie['expires'],
-                                  'size': cookie['size'], 'name': cookie['name']} for cookie in data['internal']['cookies']['cookies']]
+        cookie_internal = [{"domain": cookie['domain'], "expires": cookie['expires'],
+                                  "size": cookie['size'], "name": cookie['name']} for cookie in data['internal']['cookies']['cookies']]
     else:
         cookie_internal = []
 
@@ -38,14 +38,14 @@ def parse_file(filename):
         url) for url in data['click']['urls'] if extract_domain(url) is not None})
     
     new_row = {
-    'url': data['stats']['target'],
-    'landing_page': data['stats']['after-click-landing-page'],
-    'has_found_banner': data['stats']['has-found-banner'],
-    'cookie_first': cookie_first,
-    'cookie_click': cookie_click,
-    'cookie_internal': cookie_internal,
-    'domains_first': domains_first,
-    'domains_click': domains_click
+    "url": data['stats']['target'],
+    "landing_page": data['stats']['after-click-landing-page'],
+    "has_found_banner": data['stats']['has-found-banner'],
+    "cookie_first": json.dumps(cookie_first),
+    "cookie_click": json.dumps(cookie_click),
+    "cookie_internal": json.dumps(cookie_internal),
+    "domains_first": domains_first,
+    "domains_click": domains_click
 }
     return new_row
     # Append the new row to the DataFrame
