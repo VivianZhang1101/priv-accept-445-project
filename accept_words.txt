@@ -57,6 +57,24 @@ acconsento all'uso del cookie
 accpter et fermer
 aceitar todos
 aceitar y prosseguir
+aceitar todos os cookies
+preferências de cookies
+definições de cookies
+concordo
+ok, entendi
+ok, concordar
+ok, aceito
+ok, concordo
+entendi
+concordar
+aceito
+eu concordo
+eu concordar
+eu entendi
+eu aceito
+entendi e concordo
+continuar e fechar
+permitir todos os cookies
 acepta todas las cookies
 aceptar
 aceptar cookies
@@ -160,6 +178,7 @@ fine by me, i accept
 fortfahren
 geht klar
 got it
+got it!
 got it, thanks
 happy to accept cookies
 ho capito
@@ -256,3 +275,43 @@ zustimmen und schließen
 zustimmen und weiter
 Принять
 Я согласен
+我接受
+接受
+全部接受
+我全部接受
+我同意
+同意
+我全部同意
+好
+好的
+继续
+接受cookie
+接受所有cookie
+同意所有cookie
+接受推荐的cookie
+没问题
+我没问题
+我接受
+接受
+全部接受
+同意所有cookie
+接受推薦的cookie
+我全部接受
+我同意
+同意
+我全部同意
+好
+好的
+繼續
+接受cookie
+沒問題
+我沒問題
+我同意所有cookie
+我接受推薦的cookie
+我已閱讀及同意
+我已閱讀並同意
+✓
+✔
+我已阅读
+我已阅读及同意
+我已阅读并同意
