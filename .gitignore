@@ -1,5 +1,6 @@
 *.csv
 *.png
+data
 notebook/plots/*.pdf
 *.json
 *.zip

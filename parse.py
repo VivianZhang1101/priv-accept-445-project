@@ -72,15 +72,16 @@ def read_files_in_folder(output_folder_path):
 
 
 def main():
-    if len(sys.argv) != 2:
-        print("Usage: python parse.py <output_folder_path>")
+    if len(sys.argv) != 3:
+        print("Usage: python parse.py <output_folder_path> <output_file_name>")
+        # exampel: python parse.py data/USA/US data/USA_output.csv
         sys.exit(1)
     output_folder_path = sys.argv[1]
+    output_file_name = sys.argv[2]
     df = read_files_in_folder(output_folder_path)
     if not df.empty:
-        csv_file_name = "output.csv"
-        df.to_csv("output.csv", index=False)
-        print(f"Data exported to {csv_file_name}")
+        df.to_csv(output_file_name, index=False)
+        print(f"Data exported to {output_file_name}")
     
 if __name__ == '__main__':
     main()
