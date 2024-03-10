@@ -1,6 +1,11 @@
-*.csv
+similarweb-from-br.csv
+similarweb-from-it.csv
+similarweb-from-us-ohio.csv
+similarweb.csv
 *.png
-data
+data/HongKong
+data/UK
+data/USA
 notebook/plots/*.pdf
 *.json
 *.zip
