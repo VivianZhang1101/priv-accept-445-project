@@ -32,10 +32,10 @@ def parse_file(filename):
         cookie_internal = []
 
     # parsing domains
-    domains_first = set({extract_domain(
-        url) for url in data['first']['urls'] if extract_domain(url) is not None})
-    domains_click = set({extract_domain(
-        url) for url in data['second']['urls'] if extract_domain(url) is not None})
+    domains_first = list(set({extract_domain(
+        url) for url in data['first']['urls'] if extract_domain(url) is not None}))
+    domains_click = list(set({extract_domain(
+        url) for url in data['second']['urls'] if extract_domain(url) is not None}))
     
     new_row = {
     "url": data['stats']['target'],
@@ -80,6 +80,9 @@ def main():
     output_file_name = sys.argv[2]
     df = read_files_in_folder(output_folder_path)
     if not df.empty:
+        if os.path.exists(output_file_name):
+            # Delete the existing file
+            os.remove(output_file_name)
         df.to_csv(output_file_name, index=False)
         print(f"Data exported to {output_file_name}")
     
