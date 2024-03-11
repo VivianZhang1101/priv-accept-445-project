@@ -32,10 +32,10 @@ def parse_file(filename):
         cookie_internal = []
 
     # parsing domains
-    domains_first = list({extract_domain(
+    domains_first = set({extract_domain(
         url) for url in data['first']['urls'] if extract_domain(url) is not None})
-    domains_click = list({extract_domain(
-        url) for url in data['click']['urls'] if extract_domain(url) is not None})
+    domains_click = set({extract_domain(
+        url) for url in data['second']['urls'] if extract_domain(url) is not None})
     
     new_row = {
     "url": data['stats']['target'],
