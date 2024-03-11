@@ -7,6 +7,5 @@ all_output.csv
 data/HongKong
 data/UK
 data/USA
-notebook/plots/*.pdf
 *.json
 *.zip
