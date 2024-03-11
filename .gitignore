@@ -2,6 +2,7 @@ similarweb-from-br.csv
 similarweb-from-it.csv
 similarweb-from-us-ohio.csv
 similarweb.csv
+all_output.csv
 *.png
 data/HongKong
 data/UK
